@@ -1,0 +1,105 @@
+.footer {
+    display: flex;
+    width: 100%;
+    max-width: 1440px;
+    min-width: 320px;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 50px 80px 50px 80px;
+    box-sizing: border-box;
+    height: 264px;
+
+    &__site {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        font-size: 24px;
+        font-weight: 400;
+        line-height: 36px;
+    }
+
+    &__contacts {
+        img {
+            &:hover {
+                cursor: pointer;
+                transform: scale(1.1);
+            }
+        }
+    }
+
+    &__navigation {
+        display: grid;
+        grid-template-columns: repeat(3, 187px);
+        gap: 32px;
+        height: 168px;
+        ul {
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+            justify-content: space-between;
+            li {
+                color: #454545;
+                font-size: 16px;
+                font-weight: 500;
+                line-height: 24px;
+                text-align: end;
+                cursor: pointer;
+                &:hover {
+                    transform: scale(1.1);
+                    color: gray;
+                }
+            }
+
+            li:first-child {
+                color: black;
+                &:hover {
+                    cursor: auto;
+                    transform: none;
+                    color: black;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 1200px) {
+    .footer {
+        &__navigation {
+            grid-template-columns: repeat(3, 130px);
+            gap: 0;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .footer {
+        &__navigation {
+            grid-template-columns: repeat(3, 93px);
+            gap: 0;
+        }
+    }
+}
+
+@media (max-width: 600px) {
+    .footer {
+        height: auto;
+        align-items: center;
+        flex-direction: column;
+        padding: 30px 10px;
+        &__navigation {
+            margin-top: 10px;
+            margin-bottom: 10px;
+            
+            ul {
+                li {
+                    text-align: center;
+                }
+            }
+        }
+    &__site {
+        span {
+            text-align: center;
+        }
+    }
+    }
+}

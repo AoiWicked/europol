@@ -1,0 +1,59 @@
+.comment {
+    width: 405px;
+    height: 192px;
+    border-radius: 12px;
+    border: 1px solid #F7F7F7;
+    box-shadow: -4px 8px 20px 0px #0000001A;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: left;
+    padding: 32px;
+    box-sizing: border-box;
+
+    span {
+        font-size: 20px;
+        font-weight: 500;
+        line-height: 30px;
+    }
+    
+
+    &__personage {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 16px;
+        height: 50px;
+
+        span {
+            font-size: 16px;
+            font-weight: 500;
+            line-height: 24px;
+        }
+
+        p {
+            font-size: 16px;
+            font-weight: 500;
+            line-height: 24px;
+            color: #828282;
+        }
+
+        img {
+            width: 45px;
+            height: 45px;
+        }
+    }
+    &:hover {
+        transform: scale(1.08);
+    }
+}
+
+
+@media (max-width: 1200px) {
+    .comment {
+        width: 100%;
+        min-width: 300px;
+        max-width: 578px;
+        height: 186px;
+    }
+}
