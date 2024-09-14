@@ -1,50 +1,36 @@
-# React + TypeScript + Vite
+EUROPOLTEST Описание проекта: Этот проект является тестовым заданием. Оно разработанно с использованием React.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Установка Следуйте этим шагам для установки и запуска проекта на вашей локальной машине:
 
-Currently, two official plugins are available:
+Клонируйте репозиторий: git clone https://github.com/Tae-Zori/testcyberia.git
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Перейдите в директорию проекта: cd cyberia
 
-## Expanding the ESLint configuration
+Установите зависимости: npm install
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+Запустите проект: npm run dev
 
-- Configure the top-level `parserOptions` property like this:
+Использование После установки и запуска проекта, откройте браузер и перейдите по адресу http://localhost:5173.
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+Скрипты:
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+npm run dev: Запускает сервер разработки Vite для локальной разработки с горячей перезагрузкой.
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+npm run build: Собирает проект для продакшена, включая компиляцию TypeScript и сборку с помощью Vite.
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+npm run lint: Выполняет проверку кода с помощью ESLint для поддержания качества и стиля кода.
+
+npm run preview: Запускает сервер предпросмотра для проверки собранного приложения перед деплоем.
+
+npm run deploy: Публикует собранное приложение на GitHub Pages с использованием пакета gh-pages.
+
+Архитектура проекта Проект организован следующим образом:
+
+public/: Публичные файлы проекта (HTML, манифесты и т.д.). src/: Исходные файлы проекта. components/: Компоненты React => UI, header, main, footer. data/: Получение данных для приложения. assets: изображения в формате SVG. pages/: Страницы приложения. service/: Функции для осуществления POST-запросов. styles/: Стили (SCSS). App.tsx: Главный компонент приложения. main.tsx: Входная точка приложения.
+
+Автор: Александр Лемешев
+
+Контактная информация: woudaf.geral@gmail.com
+
+Дополнительная информация: Если у вас есть какие-либо вопросы или предложения, пожалуйста, свяжитесь со мной по указанному выше адресу электронной почты.
+
